@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<testsuite name="HeadlessChrome 0.0.0 (Windows 10 0.0.0)" package="" timestamp="2018-02-01T20:36:25" id="0" hostname="RTIWARI-WK" tests="3" errors="0" failures="0" time="0.166">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/63.0.3239.132 Safari/537.36"/>
+  </properties>
+  <testcase name="Add Product Page should compile" time="0.132" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).Add Product Page"/>
+  <testcase name="Add Product Page should dispatch a productActions.Load on init" time="0.033" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).Add Product Page"/>
+  <testcase name="UtilTest can check for null in lib project" time="0.001" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).UtilTest"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

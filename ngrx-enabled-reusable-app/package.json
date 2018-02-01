@@ -1,0 +1,91 @@
+{
+  "name": "@wonderful/company",
+  "version": "1.0.0-1",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "pretty": "prettier --parser typescript --single-quote --trailing-comma es5 --write \"**/*.ts\"",
+    "example:build:prod": "npm ng build -prod --base-href",
+    "example:start": "npm run  build:lib && ng serve -p 4210",
+    "example:start:aot": "npm run  build:lib && ng serve -prod -p 4210",
+    "example:test": "ng test",
+    "build:lib1": "npm link @branding/rootstate",
+    "build:lib2": "ng-packagr -p \"lib/product-management/ng-package.json\" && cd lib/product-management/dist/packages && npm unlink && npm link && cd ../../../../ && npm link @wonderful/product-management",
+    "build:lib": "npm run build:lib1 && npm run build:lib2",
+    "test:lib:watch": "ng test --app=lib --browsers=Chrome",
+    "test:lib": "ng test --app=lib --browsers=ChromeHeadless -sr",
+    "build": "ng-packagr -p \"lib/product-management/ng-package.json\"",
+    "test": "ng test --app=lib --browsers=ChromeHeadless -sr --reporters=progress,junit",
+    "ci": "npm run test && npm run build"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.spec",
+      "**/spec/**/*"
+    ],
+    "include": [
+      "**/*.ts",
+      "./lib/**/*.ts"
+    ]
+  },
+  "engines": {
+    "node": ">=8.6.0",
+    "npm": ">=5.3.0",
+    "yarn": ">=1.3.0 <2.0.0"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "5.2.0",
+    "@angular/common": "5.2.0",
+    "@angular/compiler": "5.2.0",
+    "@angular/core": "5.2.0",
+    "@angular/forms": "5.2.0",
+    "@angular/http": "5.2.0",
+    "@angular/platform-browser": "5.2.0",
+    "@angular/platform-browser-dynamic": "5.2.0",
+    "@angular/router": "5.2.0",
+    "@ngrx/effects": "^5.0.1",
+    "@ngrx/entity": "5.0.0",
+    "@ngrx/router-store": "5.0.0",
+    "@ngrx/store": "5.0.0",
+    "@ngrx/store-devtools": "5.0.0",
+    "classlist.js": "1.1.20150312",
+    "core-js": "2.4.1",
+    "rxjs": "5.5.6",
+    "web-animations-js": "2.3.1",
+    "zone.js": "0.8.19"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.6.6",
+    "@angular/compiler-cli": "5.2.2",
+    "@angular/language-service": "5.2.0",
+    "@angular/platform-server": "5.2.2",
+    "@types/jasmine": "2.8.3",
+    "@types/jasminewd2": "2.0.2",
+    "@types/node": "^9.3.0",
+    "codelyzer": "4.0.1",
+    "jasmine-core": "2.8.0",
+    "jasmine-node": "^1.14.5",
+    "jasmine-spec-reporter": "4.2.1",
+    "karma": "2.0.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-cli": "1.0.1",
+    "karma-coverage-istanbul-reporter": "1.2.1",
+    "karma-jasmine": "1.1.0",
+    "karma-jasmine-html-reporter": "0.2.2",
+    "karma-junit-reporter": "^1.2.0",
+    "ng-packagr": "^2.0.0-rc.12",
+    "ngrx-store-freeze": "^0.2.0",
+    "nyc": "^10.1.2",
+    "prettier": "^1.10.2",
+    "protractor": "5.1.2",
+    "ts-node": "^3.3.0",
+    "tslint": "5.9.1",
+    "typescript": "^2.8.0-dev.20180126"
+  }
+}

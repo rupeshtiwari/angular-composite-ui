@@ -1,0 +1,15 @@
+{
+  "name": "@branding/rootstate",
+  "version": "1.0.0",
+  "description": "root state",
+  "license": "MIT",
+  "author": "branding service team",
+  "scripts": {
+    "ci": "tsc -p ./tsconfig.json",
+    "build:lib": "cd dist && npm link"
+  },
+  "devDependencies": {
+    "typescript": "^2.7.1",
+    "ts-node": "^2.1.0"
+  }
+}
