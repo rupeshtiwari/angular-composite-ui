@@ -1,0 +1,9 @@
+{
+    "name": "angular-composite-ui",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "cd branding/rootstate && npm run build:lib && cd ../../ && cd ngrx-enabled-reusable-app && npm run build:lib",
+        "start": "cd ngrx-system-app && npm run link:start",
+        "init":"cd branding/rootstate && npm i && cd ../../ && cd ngrx-enabled-reusable-app && npm i && cd ../ && cd ngrx-system-app && npm i"
+    }
+}
