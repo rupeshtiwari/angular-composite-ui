@@ -41,7 +41,7 @@ import {
 @Injectable()
 export class ProductEffects {
   @Effect()
-  search$: Observable<Action> = this.actions$.pipe(
+  addProduct$: Observable<Action> = this.actions$.pipe(
     ofType<Add>(ProductActionTypes.ADD),
     map(action => action.payload),
     switchMap(product => {

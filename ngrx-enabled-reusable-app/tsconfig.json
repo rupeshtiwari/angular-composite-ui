@@ -5,7 +5,8 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "noStrictGenericChecks": true,
+    "skipLibCheck": true,
+    
     "lib": [
       "es2017",
       "dom"
@@ -25,7 +26,9 @@
       "node_modules/@types"
     ],
     "strictNullChecks": false
+  
   },
+  
   "exclude": [
     "./node_modules",
     "**/*.spec.ts",

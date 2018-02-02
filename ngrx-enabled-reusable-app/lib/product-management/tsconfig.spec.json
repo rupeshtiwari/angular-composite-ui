@@ -5,7 +5,7 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "noStrictGenericChecks": true,
+    "skipLibCheck": true,
     "lib": [
       "es2016",
       "dom"
