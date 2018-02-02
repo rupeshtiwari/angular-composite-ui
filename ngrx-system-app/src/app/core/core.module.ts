@@ -1,9 +1,11 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ProductApi } from './product.api';
+import { AppComponent } from './containers/app.component';
 
-export const COMPONENTS: any[] = [];
+export const COMPONENTS = [
+  AppComponent
+];
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -11,10 +13,10 @@ export const COMPONENTS: any[] = [];
   exports: COMPONENTS,
 })
 export class CoreModule {
-  static forFeature(): ModuleWithProviders {
+  static forRoot() {
     return {
       ngModule: CoreModule,
-      providers: [ProductApi],
+      providers: [],
     };
   }
 }
